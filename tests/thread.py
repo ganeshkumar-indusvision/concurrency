@@ -1,5 +1,9 @@
 import time
 import threading
+import sys, sysconfig
+print(sys.version)                                       
+print("GIL disabled at build:", sysconfig.get_config_var("Py_GIL_DISABLED"))
+print("GIL enabled at runtime:", sys._is_gil_enabled())
 def factorial(n):
     result = 1
     for i in range(1,n+1):
