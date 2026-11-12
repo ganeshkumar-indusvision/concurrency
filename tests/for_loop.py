@@ -9,6 +9,7 @@ def factorial(n):
 
 if __name__ == "__main__":
     start = time.perf_counter()
-    return_value = factorial(20000)
+    for _ in range(200):    
+        return_value = factorial(20000)
     end = time.perf_counter()
     print(f"Total runtime of the program in worker is {end - start} seconds")
