@@ -1,5 +1,10 @@
 from src.simple.simple import Simple
 from src.thread.thread import Thread
+import sys
+
+print(sys.version)
+
+# print()
 # import time 
 
 # mul = Mul()
