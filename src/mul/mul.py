@@ -1,7 +1,4 @@
 import numpy as np
-import time
-
-
 
 class Mul():
     def __init__(self, size=2000):
