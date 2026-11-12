@@ -4,8 +4,8 @@ import time
 
 
 class Mul():
-    def __init__(self):
-        self.size = 2000
+    def __init__(self, size=2000):
+        self.size = size
         self.a_matrix = None
         self.a_matrix = None
         self.generate_random()
@@ -17,9 +17,5 @@ class Mul():
     def run(self):
         result = self.a_matrix @ self.b_matrix
 
-if __name__ == "__main__":
-    mul = Mul()
-    start = time.time()
-    mul.run()
-    end = time.time()
-    print(f"Total runtime of the program is {end - start} seconds")
+# if __name__ == "__main__":
+ 
