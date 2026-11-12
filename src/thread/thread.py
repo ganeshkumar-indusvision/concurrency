@@ -1,18 +1,19 @@
-from src.mul.mul import Mul
-import threading
+from src.factorial.factorial import Factorial
 import time 
+import decimal
+import threading
 
 class Thread():
     def __init__(self):
-        self.mul = Mul()
+        self.fact = Factorial()
 
 
     def run(self):
-        start = time.time()
-        # self.mul.run()
+        start = decimal.Decimal(str(time.time()))
+        # self.fact.run()
         threads = []
         for i in range(5):
-            t =  threading.Thread(target=self.mul.run)
+            t =  threading.Thread(target=self.fact.run)
             threads.append(t)
             t.start()
         # Start the thread
@@ -22,7 +23,7 @@ class Thread():
         for t in threads:
             t.join()
         print("Main thread: Execution finished")
-        end = time.time()
+        end = decimal.Decimal(str(time.time()))
         print(f"Total runtime of the program in thread is {end - start} seconds")
 
 
