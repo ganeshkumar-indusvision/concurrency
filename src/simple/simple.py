@@ -9,4 +9,4 @@ class Simple():
         start = time.time()
         self.mul.run()
         end = time.time()
-        print(f"Total runtime of the program is {end - start} seconds")
+        print(f"Total runtime of the program in simple is {end - start} seconds")
