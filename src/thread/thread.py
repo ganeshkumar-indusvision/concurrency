@@ -10,6 +10,7 @@ class Thread():
         self.fact = Factorial()
         self.iter = 200
         self.worker_count = self.calculate_worker()
+        # self.worker_count = 102
         self.base, self.extra = divmod(self.iter, self.worker_count)
 
     def calculate_worker(self):
