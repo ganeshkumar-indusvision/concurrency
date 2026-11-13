@@ -5,7 +5,7 @@ import decimal
 class Simple():
     def __init__(self):
         self.fact = Factorial()
-        self.iter = 200
+        self.iter = 100
 
     def worker(self):
         for i in range(self.iter):
