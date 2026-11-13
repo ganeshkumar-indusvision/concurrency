@@ -8,10 +8,13 @@ async def sleep_await(delay,id):
     print("Done Fake Wait")
     return {"id": id}
 async def main():
-    task = sleep_await(2,1)
-    result = await task
+    task1 = sleep_await(2,1)
+    task2 = sleep_await(2,2)
+    result1 = await task1
+    result2 = await task2
     print("It's done bro")
-    print(result) 
+    print(result1)
+    print(result2) 
 
 
 # main()
