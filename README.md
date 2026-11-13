@@ -44,3 +44,25 @@ Total logical CPU cores: 24
 Total runtime of the program in thread is 0.9783794250106439 seconds
 gk@jarvis:~/indus/concurrency$ 
 ```
+
+
+Testing on 4 Core CPU with 100 iter
+
+```shell
+(ml) gk@jarvis:~/indus/concurrency$ uv run --python 3.12 main.py 
+3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]
+Total runtime of the program in simple is 41.25938564500029 seconds
+Total logical CPU cores: 4
+Total runtime of the program in thread is 24.711810887001775 seconds
+Total logical CPU cores: 4
+Total runtime of the program in process is 9.60962972299967 seconds
+(ml) gk@jarvis:~/indus/concurrency$ uv run --python 3.14t main.py 
+3.14.7 free-threading build (main, Sep 24 2026, 17:58:28) [Clang 22.1.3 ]
+Total runtime of the program in simple is 40.345531865998055 seconds
+Total logical CPU cores: 4
+Total runtime of the program in thread is 10.20734043399716 seconds
+Total logical CPU cores: 4
+Total runtime of the program in process is 8.417236731002049 seconds
+(ml) gk@jarvis:~/indus/concurrency$ 
+
+```

@@ -4,8 +4,6 @@ from src.process.process import CreateProcess
 
 import sys
 
-print(sys.version)
-
 # print()
 # import time 
 
@@ -14,12 +12,15 @@ print(sys.version)
 # mul.run()
 # end = time.time()
 # print(f"Total runtime of the program is {end - start} seconds")
-# sim= Simple()
-# sim.run()
 
-# thread = Thread()
-# thread.run()
+if __name__ == "__main__":
+    print(sys.version)
+    sim= Simple()
+    sim.run()
+
+    thread = Thread()
+    thread.run()
 
 
-# process = CreateProcess()
-# process.run()
+    process = CreateProcess()
+    process.run()
