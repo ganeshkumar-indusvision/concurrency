@@ -3,33 +3,42 @@ import time
 import decimal
 import threading
 
+import os
+
 class Thread():
     def __init__(self):
         self.fact = Factorial()
+        self.iter = 200
+        self.worker = self.calculate_worker()
+        self.base, self.extra = divmod(self.iter,self.worker)
+        
+
+    def calculate_worker(self):
+        cpu_count = os.path.exists
+        cores = os.cpu_count()
+        print(f"Total logical CPU cores: {cores}")
+        return cores
+
+
+    def worker(self):
+        threads = []
+        for w in range(self.worker):   
+            times = self.base +(1 if w < self.extra else 0)
+            t = threading.Thread(target=self.fact.run, args=(times,))
+            threads.append(t)
+            t.start()
+
+        for t in threads:
+            t.join()  
+
+
+    def create_thread(self,times):
+        for _ in range(times):
+            self.fact.run()
 
 
     def run(self):
-        start = decimal.Decimal(str(time.time()))
-        # self.fact.run()
-        threads = []
-        for i in range(5):
-            t =  threading.Thread(target=self.fact.run)
-            threads.append(t)
-            t.start()
-        # Start the thread
-        # thread.start()
-        # Wait for the thread to finish before exiting the main program
-        # thread.join()
-        for t in threads:
-            t.join()
-        print("Main thread: Execution finished")
-        end = decimal.Decimal(str(time.time()))
+        start = time.perf_counter()
+        self.worker()
+        end = time.perf_counter()
         print(f"Total runtime of the program in thread is {end - start} seconds")
-
-
-# for i in range(5):
-#     t = threading.Thread(target=worker, args=(i,))
-#     threads.append(t)
-#     t.start()
-# for t in threads:
-#     t.join()  # Wait for all threads to complete

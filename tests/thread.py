@@ -19,8 +19,8 @@ if __name__ == "__main__":
     # 1 is worker and 200 is number of iteration.
     # base is the number of iteration and extra is the remaining iteration.
     # this will help to divide the work among the workers.
-    worker_num = 24
-    base, extra = divmod(200,worker_num)
+    worker_num = 16
+    base, extra = divmod(199,worker_num)
     print(f"base: {base}, extra: {extra}")
     workers = []
     for w in range(worker_num):
