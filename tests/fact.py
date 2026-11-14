@@ -14,7 +14,7 @@ if __name__ == "__main__":
     getcontext().prec = 50
     getcontext().Emax = MAX_EMAX
     getcontext().Emin = MIN_EMIN
-    value = factorial(Decimal(str(10000000929)))
+    value = factorial(Decimal(str(50000)))
     lenght =  value.adjusted()+ 1
     result = lenght if lenght >= 50 else value  
     print(result)
