@@ -14,7 +14,7 @@ class Child(Parent):
         super().run()                             # ← what does this REALLY do?
         print("3. Child.run leaving")
 
-    def check(self):
+    def check_child(self):
         print("   Child.check (signature changed!)")
 
 
